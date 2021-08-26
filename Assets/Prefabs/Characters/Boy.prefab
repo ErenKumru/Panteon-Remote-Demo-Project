@@ -671,10 +671,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6310158398825312445}
   - component: {fileID: 448489563690674747}
-  - component: {fileID: 1615012812058271253}
+  - component: {fileID: 556919064023388137}
   - component: {fileID: 104149542614854343}
   - component: {fileID: 2106493523}
   - component: {fileID: 2106493524}
+  - component: {fileID: 7297183421692294148}
   m_Layer: 8
   m_Name: Boy
   m_TagString: Untagged
@@ -715,8 +716,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 1
---- !u!136 &1615012812058271253
-CapsuleCollider:
+--- !u!65 &556919064023388137
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -725,10 +726,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5385158
-  m_Height: 2.4020717
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.205243, z: -0.01936102}
+  serializedVersion: 2
+  m_Size: {x: 0.9108237, y: 2.3151686, z: 1.0148762}
+  m_Center: {x: -5.0209836e-14, y: 1.1485604, z: 0.10399628}
 --- !u!95 &104149542614854343
 Animator:
   serializedVersion: 3
@@ -761,9 +761,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputManager: {fileID: 0}
-  runSpeed: 5
-  rotationSpeed: 0
+  runSpeed: 6.25
   rotationTime: 0
+  bumpDuration: 0.25
+  runSpeedHolder: 0
 --- !u!114 &2106493524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -777,6 +778,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transportSpeed: 1
+--- !u!114 &7297183421692294148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6690659153085360647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d177392e30f1caa49b22e04c6f4885a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6705613825223152127
 GameObject:
   m_ObjectHideFlags: 0

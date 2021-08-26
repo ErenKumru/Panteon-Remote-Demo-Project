@@ -6,8 +6,12 @@ public class ObstacleController : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(name + " collided with " + other.gameObject.name);
         SpawnController spawnController = other.gameObject.GetComponent<SpawnController>();
-        spawnController.RespawnCharacter();
+        HandleRespawnInteraction(spawnController);
+    }
+
+    private void HandleRespawnInteraction(SpawnController spawnController)
+    {
+        if (spawnController != null) spawnController.RespawnCharacter();
     }
 }

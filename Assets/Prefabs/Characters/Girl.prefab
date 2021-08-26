@@ -234,6 +234,7 @@ GameObject:
   - component: {fileID: 1890724919}
   - component: {fileID: 1890724924}
   - component: {fileID: 7001608435101089690}
+  - component: {fileID: 4031914237897004164}
   m_Layer: 9
   m_Name: Girl
   m_TagString: Untagged
@@ -285,9 +286,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5385158
-  m_Height: 2.2744796
+  m_Height: 1.8532331
   m_Direction: 1
-  m_Center: {x: 0, y: 1.269039, z: -0.01936102}
+  m_Center: {x: 0, y: 1.4796623, z: -0.01936102}
 --- !u!65 &354431064
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -299,8 +300,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.68339753, y: 0.19734216, z: 0.54316807}
-  m_Center: {x: 0, y: 0.09867108, z: 0.06307149}
+  m_Size: {x: 0.68339753, y: 0.4819475, z: 0.54316807}
+  m_Center: {x: 0, y: 0.3805091, z: 0.06307149}
 --- !u!95 &7316796788964690335
 Animator:
   serializedVersion: 3
@@ -356,6 +357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finishLine: {fileID: 0}
   avoidancePredictionTime: 2
+  bumpDuration: 0.25
 --- !u!114 &7001608435101089690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,6 +371,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitAtRespawnDuration: 0.5
+--- !u!114 &4031914237897004164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4044663000487430495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d177392e30f1caa49b22e04c6f4885a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4850718057315499503
 GameObject:
   m_ObjectHideFlags: 0

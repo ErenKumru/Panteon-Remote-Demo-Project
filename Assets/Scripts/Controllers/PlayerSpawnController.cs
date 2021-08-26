@@ -17,20 +17,27 @@ public class PlayerSpawnController : SpawnController
         StartCoroutine(RespawnAtStartPoint());
     }
 
-    //DO ANIMATION
     private IEnumerator RespawnAtStartPoint()
     {
-        Debug.Log(gameObject.name + " called RespawnAtStartPoint");
+        SkinnedMeshRenderer[] skinnedMeshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
+
+        foreach(SkinnedMeshRenderer skinnedMeshRenderer in skinnedMeshRenderers)
+        {
+            skinnedMeshRenderer.enabled = false;
+        }
+
         PlayerController playerController = GetComponent<PlayerController>();
+        playerController.runSpeed = 0f;
         playerController.enabled = false;
         Rigidbody rigidbody = GetComponent<Rigidbody>();
         rigidbody.useGravity = false;
         Collider playerCollider = GetComponent<Collider>();
         playerCollider.enabled = false;
 
-        while (transform.position.z != spawnPoint.z)
+
+        while (Mathf.Abs(transform.position.z - spawnPoint.z) > 0.01f)
         {
-            Debug.Log("transporting " + gameObject.name);
+            playerController.runSpeed = 0f;
             transform.position = Vector3.MoveTowards(transform.position, spawnPoint, transportSpeed);
             yield return new WaitForEndOfFrame();
         }
@@ -38,5 +45,11 @@ public class PlayerSpawnController : SpawnController
         playerCollider.enabled = true;
         rigidbody.useGravity = true;
         playerController.enabled = true;
+        playerController.runSpeed = playerController.runSpeedHolder;
+
+        foreach (SkinnedMeshRenderer skinnedMeshRenderer in skinnedMeshRenderers)
+        {
+            skinnedMeshRenderer.enabled = true;
+        }
     }
 }
