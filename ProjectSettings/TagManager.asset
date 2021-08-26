@@ -17,9 +17,9 @@ TagManager:
   - Opponent
   - Obstacle
   - Ground
-  - 
-  - 
-  - 
+  - Paintable
+  - Painter
+  - FinishLine
   - 
   - 
   - 
