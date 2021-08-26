@@ -1,5 +1,6 @@
 # Panteon Remote Demo Project
 Welcome to my Panteon Remote job interview demo project.
+You can download the playable Windows build and Android build from: https://drive.google.com/file/d/1jbRG7An29eZYs7m-dsa3CsU3DL95D3jh/view?usp=sharing
 
 ## Working Dates (in 2021)
 - 10 August - 12 August
